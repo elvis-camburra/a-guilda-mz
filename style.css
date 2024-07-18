@@ -1,0 +1,406 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+/*nav*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    padding: 10px;
+}
+.links ul {
+    display: flex;
+}
+.links ul li{
+    padding: 10px;
+    list-style: none;
+}
+.links ul li a{
+    text-decoration: none;
+    color: black;
+}
+.links ul li a:hover{
+    color: rgb(0, 123, 255);
+}
+/*end of nav*/
+
+
+
+/*hero*/
+.hero{
+    margin-top: 80px;
+    color: rgba(255, 255, 255, 0.900);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(hero3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero a{
+    color: white;
+    background-color: rgb(0, 123, 255);
+    padding: 13px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}.hero a:hover{
+    background-color: white;
+    color: rgb(0, 123, 255);
+}
+/*end of hero*/
+
+
+
+/*services*/
+#servicos {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #333333;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.servicos-descricao {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.servicos-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.servico {
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icone {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.icone img {
+    width: 64px; /* ajuste o tamanho conforme necessário */
+    height: 64px; /* ajuste o tamanho conforme necessário */
+}
+
+.servico h3 {
+    color: #333333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.servico p {
+    font-size: 1rem;
+    color: #666;
+}
+/*end of services*/
+
+
+
+/* membros da equipe */
+#equipe {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.equipe-descricao {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.equipe-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centraliza os membros */
+}
+
+.membro {
+    text-align: center; /* Centraliza conteúdo */
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.membro img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px 8px 0 0; /* Arredonda apenas a parte superior */
+}
+
+.membro-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 123, 255);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.membro:hover .membro-info {
+    opacity: 1;
+}
+
+.nome-membro {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .membro {
+        width: calc(50% - 20px); /* Para 2 membros por linha */
+        max-width: 200px; /* Limita o tamanho máximo */
+    }
+}
+/* end of membros da equipe */
+
+
+
+/*contacto*/
+#contato {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #333333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.info-contato {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.info {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.formulario textarea {
+    height: 150px;
+}
+
+.formulario button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #0056b3;
+}
+/*end of contacto*/
+
+
+
+ /*footer*/
+ footer {
+    background-color: #001124;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 10pt;
+  }
+  .social-media{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .social-media ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer-links ul, .social-media ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+  }
+  .footer-links ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .footer-links ul li, .social-media ul li {
+    margin-bottom: 10px;
+  }
+  
+  .social-media img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .developer-info p {
+    margin: 10px 0;
+  }
+  .developer-info a {
+    text-decoration: none;
+    color: orange;
+  }
+/*end of footer*/
+
+
+
+/*mission-vision*/
+  .intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #666666;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666666;
+    line-height: 1.6;
+}
+  /*end of mission-vision*/
