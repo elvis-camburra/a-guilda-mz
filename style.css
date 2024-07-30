@@ -3,6 +3,8 @@ body{
     margin: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
 }
 
 
@@ -11,7 +13,7 @@ body{
 nav{
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #1E1E1E;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -24,27 +26,148 @@ nav{
 .logo{
     padding: 10px;
 }
-.links ul {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav-links {
+    
+    list-style: none;
     display: flex;
 }
-.links ul li{
-    padding: 10px;
-    list-style: none;
+
+.nav-links li {
+    margin: 0 10px;
 }
-.links ul li a{
+
+.nav-links a {
+    color: #2196F3;
     text-decoration: none;
-    color: black;
+    padding: 10px;
+    transition: background 0.3s;
 }
-.links ul li a:hover{
+
+.nav-links a:hover {
     color: rgb(0, 123, 255);
+    border-bottom: 1px solid #BBDEFB;
+    transition: 0.5;
 }
+
+.menu-toggle {
+    color: #333;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    color: #fff;
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    nav{
+        background-color: rgb(0, 123, 255);
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: rgb(0, 123, 255);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding: 10px;
+        margin-top: 70px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        padding: 20px;
+        border-bottom: 1px solid white;
+    }
+
+    .nav-links li a{
+        color: #fff;
+    }
+
+    .nav-links a:hover {
+        color: rgb(138, 191, 248);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .close-menu {
+        display: block;
+        cursor: pointer;
+        margin: 20px 0;
+    }
+}
+
+.nav-active {
+    transform: translateX(0);
+}
+
+.nav-active .close-menu {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nav-active li {
+    opacity: 1;
+    animation: navLinkFade 0.5s ease forwards 0.3s;
+}
+
+.menu-toggle.toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /*end of nav*/
 
 
 
 /*hero*/
 .hero{
-    margin-top: 80px;
+    margin-top: 50px;
     color: rgba(255, 255, 255, 0.900);
     height: 500px;
     display: flex;
@@ -55,17 +178,31 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.hero h1{
+    color: #2196F3;
+    font-weight: bold;
+}
 .hero a{
-    color: white;
-    background-color: rgb(0, 123, 255);
+    color: #E0E0E0;
+    background-color: #2196F3;
     padding: 13px;
     border-radius: 30px;
     text-decoration: none;
     margin-bottom: 20px;
 }.hero a:hover{
-    background-color: white;
+    background-color: #1E1E1E;
     color: rgb(0, 123, 255);
 }
+
+.hero p{
+    background-color:rgba(255, 255, 255, 0.900) ;
+    
+    padding: 1px;
+    color: #333333;
+    padding-top: 0.1px;
+}
+
+
 /*end of hero*/
 
 
@@ -73,7 +210,6 @@ nav{
 /*services*/
 #servicos {
     padding: 50px 0;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -84,7 +220,7 @@ nav{
 }
 
 h2 {
-    color: #333333;
+    color: #BBDEFB;
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -102,7 +238,7 @@ h2 {
 
 .servico {
     text-align: left;
-    background-color: #fff;
+    background-color: #1E1E1E;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -119,14 +255,14 @@ h2 {
 }
 
 .servico h3 {
-    color: #333333;
+    color: #BBDEFB;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .servico p {
     font-size: 1rem;
-    color: #666;
+    color: #A0A0A0;
 }
 /*end of services*/
 
@@ -135,7 +271,6 @@ h2 {
 /* membros da equipe */
 #equipe {
     padding: 50px 0;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -146,6 +281,7 @@ h2 {
 }
 
 h2 {
+    color: #BBDEFB;
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -164,6 +300,7 @@ h2 {
 }
 
 .membro {
+    background-color: #1E1E1E;
     text-align: center; /* Centraliza conteúdo */
     position: relative;
     width: 200px;
@@ -216,7 +353,6 @@ h2 {
 /*contacto*/
 #contato {
     padding: 50px 0;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -227,7 +363,7 @@ h2 {
 }
 
 h2 {
-    color: #333333;
+    color: #BBDEFB;
     font-size: 2rem;
     margin-bottom: 30px;
 }
@@ -239,26 +375,31 @@ h2 {
 }
 
 .info {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
+    background-color: #1E1E1E;
+    padding: 5%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
+}
+
+.info a{
+    color: #BBDEFB;
+    text-decoration: none;
 }
 
 .info h3 {
+    color: #BBDEFB;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
 .info p {
     font-size: 1rem;
-    color: #666;
+    color: #A0A0A0;
 }
 
 .formulario {
-    background-color: #fff;
+    background-color: #1E1E1E;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -274,6 +415,7 @@ h2 {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1rem;
+    background-color: #1E1E1E;
 }
 
 .formulario textarea {
@@ -281,17 +423,17 @@ h2 {
 }
 
 .formulario button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #2196F3;
+    color: #E0E0E0;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 .formulario button:hover {
-    background-color: #0056b3;
+    background-color: #1976D2;
 }
 /*end of contacto*/
 
@@ -299,7 +441,7 @@ h2 {
 
  /*footer*/
  footer {
-    background-color: #001124;
+    background-color: #003572;
     color: #ffffff;
     padding: 10px;
     text-align: center;
@@ -353,13 +495,13 @@ h2 {
   .intro {
     text-align: center;
     padding: 40px 20px;
-    background-color: #ffffff;
+    background-color: #1E1E1E;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
 .intro h1 {
-    color: #333333;
+    color: #BBDEFB;
     margin-bottom: 15px;
 }
 
@@ -380,7 +522,7 @@ h2 {
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: #1E1E1E;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 300px;
@@ -395,7 +537,7 @@ h2 {
 }
 
 .card h2 {
-    color: #333333;
+    color: #BBDEFB;
     margin-bottom: 15px;
 }
 

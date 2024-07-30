@@ -1,0 +1,90 @@
+Para um website em dark mode com um logo em tons de azul, você pode usar uma paleta de cores que complemente o azul e crie um visual agradável e sofisticado. Aqui está uma sugestão de paleta de cores:
+
+1. **Fundo Principal (Background)**:
+   - **Cor:** #121212 (Preto Muito Escuro)
+   - **Descrição:** Uma cor preta muito escura para o fundo principal, criando um ambiente de dark mode.
+
+2. **Superfície Secundária (Secondary Surface)**:
+   - **Cor:** #1E1E1E (Cinza Muito Escuro)
+   - **Descrição:** Usada para elementos como cartões, menus e barras laterais.
+
+3. **Texto Principal (Primary Text)**:
+   - **Cor:** #E0E0E0 (Cinza Claro)
+   - **Descrição:** Cor do texto principal, garantindo boa legibilidade.
+
+4. **Texto Secundário (Secondary Text)**:
+   - **Cor:** #A0A0A0 (Cinza Médio)
+   - **Descrição:** Usado para texto secundário e menos importante.
+
+5. **Destaques (Accent Color)**:
+   - **Cor:** #2196F3 (Azul)
+   - **Descrição:** Uma cor azul viva para destacar elementos importantes como botões e links, harmonizando com o logo.
+
+6. **Cor de Link (Link Color)**:
+   - **Cor:** #BBDEFB (Azul Claro)
+   - **Descrição:** Para links e outros elementos interativos, combinando com o logo.
+
+7. **Erro (Error Color)**:
+   - **Cor:** #CF6679 (Vermelho)
+   - **Descrição:** Para mensagens de erro e alertas.
+
+8. **Sucesso (Success Color)**:
+   - **Cor:** #4CAF50 (Verde)
+   - **Descrição:** Para mensagens de sucesso e confirmações.
+
+### Exemplo de CSS com essa Paleta de Cores
+
+```css
+body {
+    background-color: #121212; /* Fundo Principal */
+    color: #E0E0E0; /* Texto Principal */
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background-color: #1E1E1E; /* Superfície Secundária */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #BBDEFB; /* Cor de Link */
+}
+
+p {
+    color: #A0A0A0; /* Texto Secundário */
+}
+
+a {
+    color: #2196F3; /* Destaques */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #2196F3; /* Destaques */
+    color: #E0E0E0; /* Texto Principal */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1976D2; /* Destaque Escuro */
+}
+
+.alert-error {
+    color: #CF6679; /* Erro */
+}
+
+.alert-success {
+    color: #4CAF50; /* Sucesso */
+}
+```
+
+Essa paleta de cores garante que seu website tenha um visual moderno e coerente, com boa legibilidade e contraste em dark mode.
